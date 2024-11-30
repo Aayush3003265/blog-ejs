@@ -1,0 +1,72 @@
+<html lang="en">
+<head>
+   <%- include('./partials/head') %>
+    <title>SignUp</title>
+</head>
+<body>
+    <%- include('./partials/navBar') %>
+    <div class="container">
+        <form action="/user/signup" method="post" class="max-w-96 m-auto">
+            <!-- Full Name -->
+            <div class="mb-4 mt-20 ">
+              <label for="fullname" class="block text-sm font-medium text-gray-700">Full Name</label>
+              <input
+                type="text"
+                id="fullName"
+                name="fullName"
+                placeholder="Enter your full name"
+                class="mt-1 block w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                required
+              />
+            </div>
+      
+            <!-- Email -->
+            <div class="mb-4">
+              <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your email"
+                class="mt-1 block w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                required
+              />
+            </div>
+      
+            <!-- Password -->
+            <div class="mb-4">
+              <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Enter your password"
+                class="mt-1 block w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+               required
+              />
+            </div>
+      
+            <!-- Profile Image -->
+            <!-- <div class="mb-4">
+              <label for="profileImage" class="block text-sm font-medium text-gray-700">Profile Image</label>
+              <input
+                type="file"
+                id="profileImage"
+                name="profileImage"
+                class="mt-1 block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border file:border-gray-300 file:bg-gray-100 file:text-gray-700 hover:file:bg-gray-200"
+                accept="image/*"
+              />
+            </div> -->
+      
+            <!-- Submit Button -->
+            <button
+              type="submit"
+              class="w-[50%] ml-[100px] bg-blue-500 text-white p-2 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            >
+              Submit
+            </button>
+          </form>
+    </div>
+    <%- include('./partials/script') %>
+</body>
+</html>
